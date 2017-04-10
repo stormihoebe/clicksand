@@ -19,7 +19,7 @@ _Example text for the description of the project_
 
 * _Clone the repository_
 * _Run the command 'gradle run'_
-* _Open browser and go to localhost:4567_
+*banana _Open browser and go to localhost:4567_
 
 
 ### License
