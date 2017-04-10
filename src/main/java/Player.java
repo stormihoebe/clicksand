@@ -8,9 +8,11 @@ import java.util.TimerTask;
 import java.sql.Timestamp;
 
 public class Player {
+  private String name;
+  private int id;
 
-  public Player() {
-
+  public Player(String name) {
+    this.name = name;
   }
 
 }

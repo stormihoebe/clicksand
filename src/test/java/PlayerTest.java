@@ -14,4 +14,10 @@ public class PlayerTest {
   @Rule
   public DatabaseRule database = new DatabaseRule();
 
+  @Test
+  public void Player_instantiatesCorrectly_true() {
+    Player newPlayer = new Player("Ryan");
+    assertTrue(newPlayer instanceof Player);
+  }
+
 }
