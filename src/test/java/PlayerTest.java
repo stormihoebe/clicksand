@@ -20,4 +20,10 @@ public class PlayerTest {
     assertTrue(newPlayer instanceof Player);
   }
 
+  @Test
+  public void getName_instantiatesCorrectly_true() {
+    Player newPlayer = new Player("Ryan");
+    assertEquals("Ryan", newPlayer.getName());
+  }
+
 }
