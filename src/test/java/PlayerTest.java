@@ -26,4 +26,18 @@ public class PlayerTest {
     assertEquals("Ryan", newPlayer.getName());
   }
 
+  @Test
+  public void save_savesToDB_true() {
+    Player player = new Player("Ryan");
+    player.save();
+    assertTrue(Player.all().get(0).equals(player));
+  }
+
+  @Test
+  public void find_findsById_true() {
+    Player player = new Player("Ryan");
+    player.save();
+    assertEquals(player, Player.find(player.getId()));
+  }
+
 }
