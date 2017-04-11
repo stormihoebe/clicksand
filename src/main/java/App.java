@@ -21,11 +21,18 @@ public class App {
 
     post("/start-game", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      String playerName = request.queryParams("name");
-      Game newGame = new Game(playerName);
-      newGame.save();
-      request.session().attribute("currentGame", newGame);
+      // String playerName = request.queryParams("name");
+      // Game newGame = new Game(playerName);
+      // newGame.save();
+      // request.session().attribute("currentGame", newGame);
       // request.redirect("/level-1");
+      model.put("template", "templates/level.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    post("/level2", (request, response) -> {
+      Map<String, Object> model = new HashMap<String, Object>();
+      model.put("template", "templates/level2.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
