@@ -8,9 +8,6 @@
   font-family: 'Covered By Your Grace', cursive;
 }
 
-
-
-
 html {
   padding: 0 20px;
   height: 100%;
@@ -23,9 +20,10 @@ body {
   margin: auto;
 }
 
-.custom-container {
+.container {
   height: 100%;
   background-color: #eee;
+  padding: 0;
 }
 
 .text-center {
@@ -34,14 +32,17 @@ body {
 
 .jumbotron {
   background-color: #c5c5c5;
+  background-color: #333;
+  color: white;
 }
 
 .swordfish {
   background-image: url("img/swordfish.jpg");
   width: 650px;
   height:650px;
-  border: solid 20px black;
-  margin: auto;
+  border: solid 13px;
+  margin: 0 0 0 31px;
+  border-radius: 10px;
 }
 
 .btn-swordfish {
