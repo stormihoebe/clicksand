@@ -1,3 +1,28 @@
 <!--index.vtl-->
+<h1>ClickBait Game</h1>
+<h3>How to play:</h3>
+<h4>
+<ol>
+  <li>Enter Name and Click Play to Start Game</li>
+  <li>Read Level Objective</li>
+  <li>Beat the Timer to Complete the Objective</li>
+  <li>Have Fun!</li>
+</ol>
+</h4>
+
+<form action="/start-game" method="post">
+  <div class="form-group">
+    <label for="name">Your Name:</label>
+    <input type="text" class="form-control" name="name">
+  </div>
+  <button type="submit" name="button">Play</button>
+</form>
+<a href="/levels"><button type="button" name="button">All Levels</button></a>
+<h4>Top Scores</h4>
+#foreach ($game in $topScores)
+$game.getName()
+$game.getScore()
+#end
+
 
 <!--index.vtl-->
