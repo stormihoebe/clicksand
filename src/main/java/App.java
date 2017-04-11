@@ -15,7 +15,7 @@ public class App {
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/index.vtl");
-      model.put("topScores", Game.getTopScores());
+      // model.put("topScores", Game.getAllScores());
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -25,7 +25,7 @@ public class App {
       Game newGame = new Game(playerName);
       newGame.save();
       request.session().attribute("currentGame", newGame);
-      request.redirect("/level-1");
+      // request.redirect("/level-1");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 

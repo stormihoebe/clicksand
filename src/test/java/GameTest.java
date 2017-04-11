@@ -59,4 +59,16 @@ public class GameTest {
     assertEquals(10, Game.find(game.getId()).getScore());
   }
 
+  @Test
+  public void getAllScores_returnsListOfScores_true() {
+    Game game1 = new Game("Player1");
+    game1.save();
+    game1.setScore(10);
+    Game game2 = new Game("Player2");
+    game2.save();
+    game2.setScore(40);
+    assertEquals(40, Game.getGamesByScore().get(0).getScore());
+    assertEquals(10, Game.getGamesByScore().get(1).getScore());
+  }
+
 }

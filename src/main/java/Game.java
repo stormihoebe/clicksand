@@ -80,5 +80,15 @@ public class Game {
     }
   }
 
+  public static List<Game> getGamesByScore() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT * FROM games ORDER BY score DESC";
+        return con.createQuery(sql)
+          .addColumnMapping("player_name", "playerName")
+          .executeAndFetch(Game.class);
+
+    }
+  }
+
 
 }
