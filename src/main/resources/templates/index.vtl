@@ -1,31 +1,31 @@
 <!--index.vtl-->
 <div class="jumbotron">
   <h1>Welcome to the Clickbait Game!</h1>
-  <h3>Where all your clicks come true</h3>
+  <h2><em>Where all your clicks come true</em></h2>
   </div>
 <h3>How to play:</h3>
-<h4>
-<ol>
-  <li>Enter Name and Click Play to Start Game</li>
-  <li>Read Level Objective</li>
-  <li>Beat the Timer to Complete the Objective</li>
-  <li>Have Fun!</li>
-</ol>
-</h4>
+<p>Each level you are going to be instruced to find and click on something within an image. You must race against the clock and do each level as fast as you can to obtain the highest score. For your first challenge you are going to want to find the swordfish in the picture and click on it. Good Luck!</p>
+
 
 <form action="/start-game" method="post">
   <div class="form-group">
-    <label for="name">Your Name:</label>
+    <label for="name">Enter your name and Let's get this party started!</label>
     <input type="text" class="form-control" name="name">
   </div>
-  <button type="submit" name="button">Play</button>
-</form>
-<a href="/levels"><button type="button" name="button">All Levels</button></a>
-<h4>Top Scores</h4>
-#foreach ($game in $topScores)
-$game.getName()
-$game.getScore()
-#end
+  <button type="submit" name="button" class="btn btn-success button">Play!</button>
+
+
+  <div class="panel panel-default">
+    <div class="panel-heading"><h4 class="text-center">Top Scores</h4></div>
+    <div class="panel-body">
+      #foreach ($game in $topScores)
+      $game.getName()
+      $game.getScore()
+      #end
+    </div>
+  </div>
+
+
 
 
 <!--index.vtl-->
