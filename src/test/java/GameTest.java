@@ -80,7 +80,7 @@ public class GameTest {
   }
 
   @Test
-  public void getLevelName_returnsLevelNameFromDB_String() {
+  public void levelGetters_returnsLevelNameFromDB_String() {
     Game game = new Game("Player");
     game.save();
     assertEquals("Swordfish", game.getLevelName());
@@ -91,4 +91,12 @@ public class GameTest {
     assertEquals("timer div placeholder", game.getLevelTimerDiv());
   }
 
+  @Test
+  public void incrementLevel_addsOneToLevelId_true() {
+    Game game = new Game("Player");
+    game.save();
+    game.incrementLevel();
+    game.incrementLevel();
+    assertEquals(3, game.getLevelId());
+  }
 }

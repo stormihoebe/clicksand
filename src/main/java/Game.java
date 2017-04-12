@@ -149,4 +149,8 @@ public class Game {
         .executeAndFetchFirst(String.class);
     }
   }
+
+  public void incrementLevel() {
+    this.levelId++;
+  }
 }
