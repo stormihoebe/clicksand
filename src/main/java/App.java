@@ -34,9 +34,8 @@ public class App {
 
     post("/level-success", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      Game curentGame = Game.find();//how to get current game Object
-      currentGame.nextLevel();//adds 1 to current level id;
-      request.session().attribute("game");
+      Game curentGame = request.session().attribute("game");
+      
       model.put("template", "templates/level-success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
