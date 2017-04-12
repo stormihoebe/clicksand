@@ -37,7 +37,8 @@ public class App {
       Map<String, Object> model = new HashMap<String, Object>();
       Game currentGame = request.session().attribute("game");
       model.put("game", currentGame);
-
+      int lastLevel =  currentGame.getLevelId();
+      model.put("lastLevel", lastLevel);
       currentGame.incrementLevel();
       request.session().attribute("game");
       model.put("template", "templates/level-success.vtl");
