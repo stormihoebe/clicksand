@@ -79,4 +79,16 @@ public class GameTest {
     assertEquals(expectedOutcome, game.calculateScore(2000, 3000, 20000));
   }
 
+  @Test
+  public void getLevelName_returnsLevelNameFromDB_String() {
+    Game game = new Game("Player");
+    game.save();
+    assertEquals("Swordfish", game.getLevelName());
+    assertEquals("Find the swordfish.", game.getLevelInstruction());
+    int millis = 20000;
+    assertEquals(millis, game.getLevelMillis());
+    assertEquals("image div placeholder", game.getLevelImageDiv());
+    assertEquals("timer div placeholder", game.getLevelTimerDiv());
+  }
+
 }
