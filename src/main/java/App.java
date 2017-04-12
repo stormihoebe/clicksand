@@ -18,7 +18,7 @@ public class App {
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/index.vtl");
-      // model.put("topScores", Game.getAllScores());
+      model.put("topScores", Game.getGamesByScore());
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -38,7 +38,7 @@ public class App {
       Game currentGame = request.session().attribute("game");
       long endTime = System.currentTimeMillis();
       long startTime = request.session().attribute("startTime");
-      int levelScore = currentGame.calculateLevelScore(startTimer, endTime, currentGame.getLevelMillis());
+      int levelScore = currentGame.calculateLevelScore(startTime, endTime, currentGame.getLevelMillis());
       model.put("levelScore", levelScore);
       currentGame.setScore(levelScore);
       model.put("game", currentGame);
