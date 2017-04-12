@@ -28,22 +28,26 @@ public class App {
       Game newGame = new Game(playerName);
       newGame.save();
       request.session().attribute("game", newGame);
-      response.redirect("/level");
+      String url = String.format("levels/%d", newGame.getLevelId());
+      response.redirect(url);
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    post("/level-success", (request, response) -> {
+    post("/levels/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
-      Game curentGame = request.session().attribute("game");
-      
+      Game currentGame = request.session().attribute("game");
+      currentGame.incrementLevel();
+      // int yada = timeTaken.calculateScore();
+      // int yadascore = game.calculateScore();
+      // game.updateScore(yadascore);
       model.put("template", "templates/level-success.vtl");
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
-    get("/level", (request, response) -> {
+    get("/levels/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/level.vtl");
-      request.session().attribute("game");
+      model.put("game", request.session().attribute("game"));
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 

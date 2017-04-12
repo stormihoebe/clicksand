@@ -1,21 +1,29 @@
 <!-- level.vtl -->
 <div class="jumbotron text-center">
-  <h1>Level $levelId - $game.getLevelDescription($levelId)</h1>
+  <h1>Level $game.getLevelId() - $game.getLevelName()</h1>
 </div>
 
 <div class="row text-center">
   <div class="col-md-8">
 
-    $game.getLevelScape()
-    <form action="/level-success" method="post">
-      <button type="submit" name="button" class="btn-swordfish"></button>
-    </form>
+    <div class="level$game.getLevelId()">
+      <form action="/levels/$game.getLevelId()" method="post">
+        <button type="submit" name="button" class="btn btn-$game.getLevelId()">
+        </button>
+      </form>
+    <div>
+
+
+    $game.getLevelInstruction()
+
   </div>
 
   <div class="col-md-4">
     <h2 class="bonusTime">Bonus Time:</h2>
 
-    $game.getLevelTimer($levelId)
+    <div id="timer">
+      <div id="seconds"><span id ="time$game.getLevelMillis()"></span></div>
+    </div>
 
   </div>
 

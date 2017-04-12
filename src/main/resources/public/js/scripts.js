@@ -15,10 +15,10 @@ function startTimer(duration, display) {
 }
   jQuery(function ($) {
       var twentySeconds = 20,
-          display = $('#time20');
+          display = $('#time20000');
       startTimer(twentySeconds, display);
 });
-///Thirty Second Timer
+///Thirtyfive Second Timer
 function startTimer(duration, display) {
     var timer = duration, seconds;
     setInterval(function () {
@@ -32,7 +32,7 @@ function startTimer(duration, display) {
     }, 1000);
 }
   jQuery(function ($) {
-      var twentySeconds = 50,
-          display = $('#time30');
-      startTimer(twentySeconds, display);
+      var thirtyfiveSeconds = 50,
+          display = $('#time35000');
+      startTimer(thirtyfiveSeconds, display);
 });

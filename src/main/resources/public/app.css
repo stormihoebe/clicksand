@@ -1,7 +1,7 @@
 @import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 
 
-#time{
+#time35000, #time20000{
   font-size: 80px;
   color: gray;
   text-align: center;
@@ -36,7 +36,7 @@ body {
   color: white;
 }
 
-.swordfish {
+.level1 {
   background-image: url("img/swordfish.jpg");
   width: 650px;
   height:650px;
@@ -45,7 +45,7 @@ body {
   border-radius: 10px;
 }
 
-.btn-swordfish {
+.btn-1{
   height: 59px;
   width: 70px;
   position: absolute;
