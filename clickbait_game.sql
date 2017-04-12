@@ -75,9 +75,7 @@ CREATE TABLE levels (
     id integer NOT NULL,
     name character varying,
     instruction character varying,
-    millis integer,
-    image_div character varying,
-    timer_div character varying
+    millis integer
 );
 
 
@@ -177,7 +175,17 @@ SELECT pg_catalog.setval('games_id_seq', 3, true);
 -- Data for Name: levels; Type: TABLE DATA; Schema: public; Owner: Guest
 --
 
-COPY levels (id, name, instruction, millis, image_div, timer_div) FROM stdin;
+COPY levels (id, name, instruction, millis) FROM stdin;
+1	Swordfish	Find the swordfish.	20000
+2	Elephant	Find the elephant.	20000
+3	Buffalo	Find the buffalo.	20000
+4	Rice	Find the rice.	20000
+5	Button	Find the button.	20000
+6	Pennies	Find the upside down penny.	35000
+8	Music Festival	Find the fox.	25000
+7	Geography	Find Syria.	20000
+9	Star Wars	Find Jaba.	35000
+10	Constellations	Find Cassiopeia.	35000
 \.
 
 
@@ -185,7 +193,7 @@ COPY levels (id, name, instruction, millis, image_div, timer_div) FROM stdin;
 -- Name: levels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: Guest
 --
 
-SELECT pg_catalog.setval('levels_id_seq', 1, false);
+SELECT pg_catalog.setval('levels_id_seq', 10, true);
 
 
 --
