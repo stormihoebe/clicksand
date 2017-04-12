@@ -36,16 +36,28 @@ body {
   color: white;
 }
 
-.level1 {
-  background-image: url("img/swordfish.jpg");
+.backgroundPosition {
   width: 650px;
   height:650px;
   border: solid 13px;
   margin: 0 0 0 31px;
   border-radius: 10px;
+  margin-bottom: 43px;
 }
 
-.btn-1{
+.level1 {
+  background-image: url("img/swordfish.jpg");
+}
+
+.level2 {
+  background-image: url("img/purpletheme.png");
+}
+
+.level3 {
+  background-image: url("img/sign.png");
+}
+
+.btn-1 {
   height: 59px;
   width: 70px;
   position: absolute;
@@ -53,6 +65,32 @@ body {
   top: 330px;
   opacity: .0;
   cursor: auto;
+}
+
+.btn-2 {
+  height: 23px;
+  width: 20px;
+  position: absolute;
+  left: 63px;
+  top: 81px;
+  opacity:0;
+  cursor: auto;
+}
+
+.btn-3 {
+  height: 31px;
+  width: 84px;
+  position: absolute;
+  right: 230px;
+  bottom: 106px;
+  opacity: 0;
+  cursor: auto;
+}
+
+.instruction {
+  font-family: 'Covered By Your Grace', cursive;
+  font-size: 50px;
+  text-align: center;
 }
 
 .bonusTime {

@@ -6,15 +6,12 @@
 <div class="row text-center">
   <div class="col-md-8">
 
-    <div class="level$game.getLevelId()">
+    <div class="level$game.getLevelId() backgroundPosition">
       <form action="/levels/$game.getLevelId()" method="post">
         <button type="submit" name="button" class="btn btn-$game.getLevelId()">
         </button>
       </form>
 
-    <div class="instruction">
-      $game.getLevelInstruction()
-    </div>
 
     </div>
   </div>
@@ -26,7 +23,12 @@
     </div>
 
   </div>
+</div>
 
+<div class="row">
+  <div class="instruction">
+    $game.getLevelInstruction()
+  </div>
 </div>
 
 <!-- level.vtl -->

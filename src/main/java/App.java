@@ -42,6 +42,8 @@ public class App {
       model.put("levelScore", levelScore);
       currentGame.setScore(levelScore);
       model.put("game", currentGame);
+      int lastLevel =  currentGame.getLevelId();
+      model.put("lastLevel", lastLevel);
       currentGame.incrementLevel();
       request.session().attribute("game");
       model.put("template", "templates/level-success.vtl");
