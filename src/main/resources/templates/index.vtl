@@ -1,30 +1,45 @@
 <!--index.vtl-->
-<div class=''jumbotron''>
+<div class='jumbotron'>
   <h1>Welcome to the Clickbait Game!</h1>
   <h2><em>Where all your clicks come true</em></h2>
   </div>
 <h3>How to play:</h3>
 <p>Each level you are going to be instruced to find and click on something within an image. You must race against the clock and do each level as fast as you can to obtain the highest score. For your first challenge you are going to want to find the swordfish in the picture and click on it. Good Luck!</p>
 
+<div class="container">
 
-<form action="/start-game" method="post">
-  <div class="form-group">
-    <label for="name">Enter your name and Let's get this party started!</label>
-    <input type="text" class="form-control" name="name">
-  </div>
-  <button type="submit" name="button" class="btn btn-success button">Play!</button>
 
-</form>
+  <form action="/start-game" method="post">
+    <div class="form-group">
+      <label for="name">Enter your name and Let's get this party started!</label>
+      <input type="text" class="form-control" name="name">
+    </div>
+    <button type="submit" name="button" class="btn btn-success button">Play!</button>
+
+  </form>
 
   <div class="panel panel-default">
     <div class="panel-heading"><h4 class="text-center">Top Scores</h4></div>
-    <div class="panel-body">
-      #foreach ($game in $topScores)
-      $game.getName()
-      $game.getScore()
-      #end
+      <div class="panel-body">
+
+        <p>
+        $topScores.get(0).getPlayerName() <span class="text-right">$topScores.get(0).getScore()</span>
+        </p>
+        <p>
+        $topScores.get(1).getPlayerName() <span class="text-right">$topScores.get(1).getScore()</span>
+        </p>
+        <p>
+        $topScores.get(2).getPlayerName() <span class="text-right">$topScores.get(2).getScore()</span>
+        </p>
+        <p>
+        $topScores.get(3).getPlayerName() <span class="text-right">$topScores.get(3).getScore()</span>
+        </p>
+        <p>
+        $topScores.get(4).getPlayerName() <span class="text-right">$topScores.get(4).getScore()</span>
+        </p>
     </div>
   </div>
+</div>
 
 
 

@@ -18,7 +18,7 @@ public class App {
     get("/", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/index.vtl");
-      // model.put("topScores", Game.getAllScores());
+      model.put("topScores", Game.getGamesByScore());
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
 
@@ -36,6 +36,11 @@ public class App {
     post("/levels/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       Game currentGame = request.session().attribute("game");
+      long endTime = System.currentTimeMillis();
+      long startTime = request.session().attribute("startTime");
+      int levelScore = currentGame.calculateLevelScore(startTime, endTime, currentGame.getLevelMillis());
+      model.put("levelScore", levelScore);
+      currentGame.setScore(levelScore);
       model.put("game", currentGame);
       int lastLevel =  currentGame.getLevelId();
       model.put("lastLevel", lastLevel);
@@ -48,6 +53,8 @@ public class App {
     get("/levels/:id", (request, response) -> {
       Map<String, Object> model = new HashMap<String, Object>();
       model.put("template", "templates/level.vtl");
+      long startTime = System.currentTimeMillis();
+      request.session().attribute("startTime", startTime);
       model.put("game", request.session().attribute("game"));
       return new ModelAndView(model, layout);
     }, new VelocityTemplateEngine());
