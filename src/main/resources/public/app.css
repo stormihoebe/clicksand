@@ -53,6 +53,10 @@ body {
   background-image: url("img/purpletheme.png");
 }
 
+.level3 {
+  background-image: url("img/sign.png");
+}
+
 .btn-1 {
   height: 59px;
   width: 70px;
@@ -63,13 +67,23 @@ body {
   cursor: auto;
 }
 
-.btn-2{
+.btn-2 {
   height: 23px;
   width: 20px;
   position: absolute;
   left: 63px;
   top: 81px;
   opacity:0;
+  cursor: auto;
+}
+
+.btn-3 {
+  height: 31px;
+  width: 84px;
+  position: absolute;
+  right: 230px;
+  bottom: 106px;
+  opacity: 0;
   cursor: auto;
 }
 
