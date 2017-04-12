@@ -186,6 +186,11 @@ COPY levels (id, name, instruction, millis) FROM stdin;
 7	Geography	Find Syria.	20000
 9	Star Wars	Find Jaba.	35000
 10	Constellations	Find Cassiopeia.	35000
+12	Waldo	Where's Waldo?	35000
+11	Beetle	Find the Beetle.	20000
+13	Hamburger	Find the hamburger.	25000
+14	Sniper	Find the sniper.	25000
+15	Bow Tie	Find the bow tie.	35000
 \.
 
 
@@ -193,7 +198,7 @@ COPY levels (id, name, instruction, millis) FROM stdin;
 -- Name: levels_id_seq; Type: SEQUENCE SET; Schema: public; Owner: Guest
 --
 
-SELECT pg_catalog.setval('levels_id_seq', 10, true);
+SELECT pg_catalog.setval('levels_id_seq', 15, true);
 
 
 --

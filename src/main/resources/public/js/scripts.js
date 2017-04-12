@@ -1,6 +1,7 @@
+// var clicksandWhisper = new Audio('clicksand.m4a');
+// clicksandWhisper.play();
+
 ///Twenty Second Timer
-
-
 function startTimer(duration, display) {
     var timer = duration, seconds;
     setInterval(function () {

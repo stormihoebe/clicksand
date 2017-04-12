@@ -89,10 +89,9 @@ public class Game {
   public static List<Game> getGamesByScore() {
     try(Connection con = DB.sql2o.open()) {
       String sql = "SELECT * FROM games ORDER BY score DESC";
-        return con.createQuery(sql)
-          .addColumnMapping("player_name", "playerName")
-          .executeAndFetch(Game.class);
-
+      return con.createQuery(sql)
+        .addColumnMapping("player_name", "playerName")
+        .executeAndFetch(Game.class);
     }
   }
 
@@ -131,24 +130,6 @@ public class Game {
       .executeAndFetchFirst(String.class));
     }
   }
-
-  // public String getLevelImageDiv() {
-  //   try(Connection con = DB.sql2o.open()) {
-  //     String sql = "SELECT image_div FROM levels WHERE id = :id";
-  //     return con.createQuery(sql)
-  //       .addParameter("id", this.levelId)
-  //       .executeAndFetchFirst(String.class);
-  //   }
-  // }
-  //
-  // public String getLevelTimerDiv() {
-  //   try(Connection con = DB.sql2o.open()) {
-  //     String sql = "SELECT timer_div FROM levels WHERE id = :id";
-  //     return con.createQuery(sql)
-  //       .addParameter("id", this.levelId)
-  //       .executeAndFetchFirst(String.class);
-  //   }
-  // }
 
   public void incrementLevel() {
     this.levelId++;
