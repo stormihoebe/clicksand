@@ -6,12 +6,24 @@
 <h3>Total Score: $game.getScore()</h3>
 
 <div class="row text-center">
-  <div class="col-md-8">
-    <h3> Your objective for the next level: $game.getLevelInstruction() </h3>
-  </div>
+  #if($lastLevel < 10)
+    <div class="col-md-8">
+      <h3> Your objective for the next level: $game.getLevelInstruction() </h3>
+    </div>
 
-  <div class="col-md-4">
-    <a href="/levels/$game.getLevelId()">Next Level!</a>
-  </div>
-
+    <div class="col-md-4">
+      <a href="/levels/$game.getLevelId()">Next Level!</a>
+    </div>
+  #else
+    <h2>Hurrah!!</h2>
+    <h3>You have completed the game!</h3>
+    <br>
+    </br>
+    <h4>See how you stacked up against other players:</h4>
+    #foreach($game in $topScores)
+      <p>
+        $game.getPlayerName() <span class="text-right">$game.getScore()</span>
+      </p>
+      #end
+  #end
 </div>
