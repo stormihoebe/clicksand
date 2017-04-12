@@ -57,6 +57,36 @@ body {
   background-image: url("img/sign.png");
 }
 
+.level4 {
+  background-image: url("img/whitetheme.png");
+}
+
+.level5 {
+  background-image: url("img/redtheme.png");
+}
+
+.level6 {
+  background-image: url("img/penny800X800.png");
+}
+
+.level7 {
+  background-image: url("img/world.png");
+  background-position: center;
+}
+
+.level8 {
+  background-image: url("img/musicfest.jpg");
+}
+
+.level9 {
+  background-image: url("img/jaba.jpg");
+  background-position: center;
+}
+
+.level10 {
+  background-image: url("img/constellations.png");
+}
+
 .btn-1 {
   height: 59px;
   width: 70px;
@@ -85,6 +115,82 @@ body {
   bottom: 106px;
   opacity: 0;
   cursor: auto;
+}
+
+.btn-4 {
+  height: 23px;
+  width: 31px;
+  position: absolute;
+  left: 135px;
+  bottom: 96px;
+  opacity: 0;
+  cursor: auto;
+}
+
+.btn-5 {
+  height: 33px;
+  width: 33px;
+  position: absolute;
+  right: 117px;
+  top: 217px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 63px;
+}
+
+.btn-6 {
+  height: 59px;
+  width: 59px;
+  position: absolute;
+  left: 186px;
+  bottom: 196px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 63px;
+}
+
+.btn-7 {
+  height: 14px;
+  width: 25px;
+  position: absolute;
+  right: 360px;
+  top: 238px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 0;
+}
+
+.btn-8 {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  left: 208px;
+  top: 261px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 63px;
+}
+
+.btn-9 {
+  height: 35px;
+  width: 35px;
+  position: absolute;
+  right: 221px;
+  top: 180px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 63px;
+}
+
+.btn-10 {
+  height: 69px;
+  width: 128px;
+  position: absolute;
+  left: 307px;
+  top: 24px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 0;
 }
 
 .instruction {
