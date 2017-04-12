@@ -96,13 +96,13 @@ public class Game {
     }
   }
 
-  public Integer calculateScore(long levelStart, long levelEnd, long levelMillis) {
+  public Integer calculateLevelScore(long levelStart, long levelEnd, long levelMillis) {
     long timeDifference = levelEnd - levelStart;
     if (timeDifference > levelMillis) {
       timeDifference = levelMillis;
     }
-    Integer score = (int) (long) (levelMillis - timeDifference + 500);
-    return score;
+    Integer levelScore = (int) (long) (levelMillis - timeDifference + 500);
+    return levelScore;
   }
 
   public String getLevelName() {
