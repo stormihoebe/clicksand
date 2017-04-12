@@ -1,24 +1,33 @@
 <!-- level.vtl -->
 <div class="jumbotron text-center">
-  <h1>Level 1 - Swordfish</h1>
+  <h1>Level $levelId - $game.getLevelDescription($levelId)</h1>
 </div>
 
 <div class="row text-center">
   <div class="col-md-8">
-    <div class="swordfish">
-      <form action="/level2" method="post">
-        <button type="submit" name="button" class="btn-swordfish"></button>
-      </form>
-    </div>
+
+    $game.getLevelScape()
+    <form action="/level-success" method="post">
+      <button type="submit" name="button" class="btn-swordfish"></button>
+    </form>
   </div>
 
   <div class="col-md-4">
     <h2 class="bonusTime">Bonus Time:</h2>
-      <div id="timer">
-        <div id="seconds"><span id ="time"></span></div>
-      </div>
+
+    $game.getLevelTimer($levelId)
+
   </div>
 
 </div>
 
 <!-- level.vtl -->
+
+
+<!-- <div class="swordfish">    This would go in the database right?  getLevelImg()
+
+</div> -->
+
+<!-- <div id="timer">
+  <div id="seconds"><span id ="time20"></span></div>
+</div> -->
