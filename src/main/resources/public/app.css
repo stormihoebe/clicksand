@@ -1,3 +1,13 @@
+@font-face {
+  font-family: 'Slice';
+  src: url('slice.eot'); /* IE9 Compat Modes */
+  src: url('slice.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('slice.woff2') format('woff2'), /* Super Modern Browsers */
+       url('slice.woff') format('woff'), /* Pretty Modern Browsers */
+       url('slice.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('webfont.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
+
 @import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 
 
@@ -85,6 +95,22 @@ body {
 
 .level10 {
   background-image: url("img/constellations.png");
+}
+
+.level11 {
+  background-image: url("img/leaves.jpg");
+}
+
+.level12 {
+  background-image: url("img/waldoburger.jpg");
+}
+
+.level13 {
+  background-image: url("img/sniperscene.jpg");
+}
+
+.level14 {
+  background-image: url("img/penguins.jpg");
 }
 
 .btn-1 {
@@ -192,6 +218,46 @@ body {
   cursor: auto;
   border-radius: 0;
 }
+.btn-11 {
+  height: 27px;
+  width: 40px;
+  position: absolute;
+  right: 213px;
+  top: 79px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 0;
+}
+.btn-12 {
+  height: 128px;
+  width: 50px;
+  position: absolute;
+  left: 169px;
+  bottom: 92px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 0;
+}
+.btn-13 {
+  height: 30px;
+  width: 20px;
+  position: absolute;
+  right: 115px;
+  top: 107px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 0
+}
+.btn-14 {
+  height: 30px;
+  width: 30px;
+  position: absolute;
+  right: 143px;
+  top: 68px;
+  opacity: 0;
+  cursor: auto;
+  border-radius: 0;
+}
 
 .instruction {
   font-family: 'Covered By Your Grace', cursive;
@@ -201,10 +267,6 @@ body {
 
 .bonusTime {
   margin: 0;
-}
-
-.panel-body {
-  text-align: center;
 }
 
 h4, h5, p, h1, h3, label {
@@ -225,6 +287,7 @@ h3 {
   font-size: 35px;
 }
 
+/* index page */
 .row-width {
   width: 75%;
   margin: auto;
@@ -250,4 +313,23 @@ h3 {
 .form-control {
   width: 50%;
   margin: auto;
+}
+
+.panel-body {
+  text-align: center;
+}
+
+.jumbotron h1 {
+  font-family: 'Slice', Fallback, sans-serif;
+  font-size: 53px;
+}
+
+.home h1 {
+  font-family: 'Slice', Fallback, sans-serif;
+  font-size: 134px;
+}
+
+.success h1 {
+  font-family: 'Slice', Fallback, sans-serif;
+  font-size: 59px;
 }
