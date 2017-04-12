@@ -11,10 +11,12 @@ public class Game {
   private String playerName;
   private int id;
   private int score;
+  private int levelId;
 
   public Game(String playerName) {
     this.playerName = playerName;
     this.score = 0;
+    this.levelId = 1;
   }
 
   public String getPlayerName() {
@@ -27,6 +29,10 @@ public class Game {
 
   public int getId() {
     return this.id;
+  }
+
+  public int getLevelId() {
+    return this.levelId;
   }
 
   public void save() {
@@ -99,5 +105,52 @@ public class Game {
     return score;
   }
 
+  public String getLevelName() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT name FROM levels WHERE id = :id";
+      return con.createQuery(sql)
+        .addParameter("id", this.levelId)
+        .executeAndFetchFirst(String.class);
+    }
+  }
 
+  public String getLevelInstruction() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT instruction FROM levels WHERE id = :id";
+      return con.createQuery(sql)
+        .addParameter("id", this.levelId)
+        .executeAndFetchFirst(String.class);
+    }
+  }
+
+  public int getLevelMillis() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT millis FROM levels WHERE id = :id";
+      return Integer.parseInt(con.createQuery(sql)
+      .addParameter("id", this.levelId)
+      .executeAndFetchFirst(String.class));
+    }
+  }
+
+  public String getLevelImageDiv() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT image_div FROM levels WHERE id = :id";
+      return con.createQuery(sql)
+        .addParameter("id", this.levelId)
+        .executeAndFetchFirst(String.class);
+    }
+  }
+
+  public String getLevelTimerDiv() {
+    try(Connection con = DB.sql2o.open()) {
+      String sql = "SELECT timer_div FROM levels WHERE id = :id";
+      return con.createQuery(sql)
+        .addParameter("id", this.levelId)
+        .executeAndFetchFirst(String.class);
+    }
+  }
+
+  public void incrementLevel() {
+    this.levelId++;
+  }
 }
