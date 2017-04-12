@@ -72,11 +72,11 @@ public class GameTest {
   }
 
   @Test
-  public void calculateScore_returnsLevelScore() {
+  public void calculateLevelScore_returnsLevelScore() {
     Game game = new Game("Player");
     game.save();
     Integer expectedOutcome = 19500;
-    assertEquals(expectedOutcome, game.calculateScore(2000, 3000, 20000));
+    assertEquals(expectedOutcome, game.calculateLevelScore(2000, 3000, 20000));
   }
 
   @Test
