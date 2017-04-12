@@ -1,11 +1,11 @@
 @import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 
 
-#time35000, #time20000{
+#time35000, #time20000, #time25000 {
   font-size: 80px;
   color: gray;
   text-align: center;
-  font-family: 'Covered By Your Grace', cursive;
+  font-family: 'VT323', monospace;
 }
 
 html {
@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  height: 100%;
+  min-height: 100%;
   background-color: #eee;
   padding: 0;
 }
@@ -201,4 +201,53 @@ body {
 
 .bonusTime {
   margin: 0;
+}
+
+.panel-body {
+  text-align: center;
+}
+
+h4, h5, p, h1, h3, label {
+  font-family: 'VT323', monospace;
+}
+label {
+  font-size: 25px;
+}
+h5 {
+  font-size: 35px;
+}
+
+h4 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 35px;
+}
+
+.row-width {
+  width: 75%;
+  margin: auto;
+}
+
+.panel {
+  width: 60%;
+  margin: auto;
+}
+
+.mid-container {
+  margin: 25px;
+  text-align: center;
+}
+
+.mid-container p {
+  width: 50%;
+  margin: auto;
+  margin-bottom: 20px;
+  font-family: sans-serif;;
+}
+
+.form-control {
+  width: 50%;
+  margin: auto;
 }
