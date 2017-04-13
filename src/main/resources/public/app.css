@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  max-width: 1050px;
+  /*max-width: 1050px;*/
   height: 100%;
   margin: auto;
 }
@@ -348,4 +348,26 @@ h3 {
 .success h1 {
   font-family: 'Slice', Fallback, sans-serif;
   font-size: 59px;
+}
+
+@media screen and (max-width: 1200px){
+    .home h1 {
+        font-size: 85px;
+        text-align: center;
+
+    }
+
+@media screen and (max-width: 900px){
+    .home h1 {
+        font-size: 60px;
+        text-align: center;
+
+    }
+}
+@media screen and (max-width: 550px){
+    .home h1 {
+        font-size: 40px;
+        text-align: center;
+
+    }
 }
