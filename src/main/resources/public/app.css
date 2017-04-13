@@ -386,3 +386,8 @@ h3 {
 
     }
 }
+.home h1 {
+  background: -webkit-linear-gradient(yellow, orange);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
