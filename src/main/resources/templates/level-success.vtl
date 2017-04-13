@@ -28,7 +28,7 @@
     </br>
     <h4>See how you stacked up against other players:</h4>
     #foreach($game in $topScores)
-      <p>
+      <p id="highScores">
         $game.getPlayerName() <span class="text-right">$game.getScore()</span>
       </p>
       #end

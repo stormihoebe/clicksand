@@ -5,28 +5,17 @@ import spark.template.velocity.VelocityTemplateEngine;
 import static spark.Spark.*;
 
 
-//Use when we are ready to deploy to heroku
-// public class App {
-//   static int getHerokuAssignedPort() {
-//     ProcessBuilder processBuilder = new ProcessBuilder();
-//     if (processBuilder.environment().get("PORT") != null) {
-//       return Integer.parseInt(processBuilder.environment().get("PORT"));
-//     }
-//     return 4567;
-//   }
-//   public static void main(String[] args) {
-// 
-//     port(getHerokuAssignedPort());
-//     staticFileLocation("/public");
-//     String layout = "templates/layout.vtl";
-
-
 public class App {
-
+  static int getHerokuAssignedPort() {
+    ProcessBuilder processBuilder = new ProcessBuilder();
+    if (processBuilder.environment().get("PORT") != null) {
+      return Integer.parseInt(processBuilder.environment().get("PORT"));
+    }
+    return 4567;
+  }
   public static void main(String[] args) {
-    // Use this setting only for development
-    externalStaticFileLocation(String.format("%s/src/main/resources/public", System.getProperty("user.dir")));
 
+    port(getHerokuAssignedPort());
     staticFileLocation("/public");
     String layout = "templates/layout.vtl";
 
