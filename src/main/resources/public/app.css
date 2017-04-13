@@ -48,17 +48,14 @@ body {
   text-align: center;
 }
 
-<<<<<<< HEAD
-=======
+
 .jumbotron {
-  background-color: #c5c5c5;
   background-color: #333;
   color: white;
   border-radius: 0;
   border: solid 15px #eee;
 }
 
->>>>>>> 76d92e3b5392e7a5779bb9a67dcfa0017723cec7
 .backgroundPosition {
   width: 650px;
   height:650px;
