@@ -162,10 +162,10 @@ ALTER TABLE ONLY players ALTER COLUMN id SET DEFAULT nextval('players_id_seq'::r
 
 COPY games (id, player_name, score) FROM stdin;
 4	Gloria	100000
-5	Megan	100000
-6	Riley	100000
 7	Ryan	100000
 8	Stormi	100000
+6	Riley	100000
+5	Megan	100000
 \.
 
 
@@ -173,7 +173,7 @@ COPY games (id, player_name, score) FROM stdin;
 -- Name: games_id_seq; Type: SEQUENCE SET; Schema: public; Owner: Guest
 --
 
-SELECT pg_catalog.setval('games_id_seq', 8, true);
+SELECT pg_catalog.setval('games_id_seq', 10, true);
 
 
 --
@@ -191,11 +191,11 @@ COPY levels (id, name, instruction, millis) FROM stdin;
 7	Geography	Find Syria.	20000
 9	Star Wars	Find Jaba.	35000
 10	Constellations	Find Cassiopeia.	35000
-12	Waldo	Where's Waldo?	35000
 11	Beetle	Find the Beetle.	20000
-13	Hamburger	Find the hamburger.	25000
 14	Sniper	Find the sniper.	25000
 15	Bow Tie	Find the bow tie.	35000
+13	Where's the Beef?	Find the hamburger.	25000
+12	Where's Waldo?	Find the beatnik in the red and white shirt.	35000
 \.
 
 
