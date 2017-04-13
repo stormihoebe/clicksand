@@ -161,6 +161,11 @@ ALTER TABLE ONLY players ALTER COLUMN id SET DEFAULT nextval('players_id_seq'::r
 --
 
 COPY games (id, player_name, score) FROM stdin;
+4	Gloria	100000
+5	Megan	100000
+6	Riley	100000
+7	Ryan	100000
+8	Stormi	100000
 \.
 
 
@@ -168,7 +173,7 @@ COPY games (id, player_name, score) FROM stdin;
 -- Name: games_id_seq; Type: SEQUENCE SET; Schema: public; Owner: Guest
 --
 
-SELECT pg_catalog.setval('games_id_seq', 3, true);
+SELECT pg_catalog.setval('games_id_seq', 8, true);
 
 
 --
