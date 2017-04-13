@@ -40,12 +40,6 @@ body {
   text-align: center;
 }
 
-.jumbotron {
-  background-color: #c5c5c5;
-  background-color: #333;
-  color: white;
-}
-
 .backgroundPosition {
   width: 650px;
   height:650px;
@@ -317,6 +311,10 @@ h3 {
 .mid-container {
   margin: 25px;
   text-align: center;
+}
+
+.container {
+
 }
 
 .mid-container p {
