@@ -1,11 +1,11 @@
-# _Clickbait Game_
+# Clickbait Game
 
-#### _Clickbait Game, 04-10-2017_
+#### Clickbait Game, 04-10-2017
 
-#### By _** Stormi, Ryan, Megan, Riley, and Gloria **_
+#### By ** Stormi, Ryan, Megan, Riley, and Gloria **
 
 ## Description
-_Clickbait is an exciting click game where you complete each level by finding and clicking a specified objects. Beat the clock for extra points and try to have the top score in the top scores hall of fame!  _
+Clickbait is an exciting click game where you complete each level by finding and clicking a specified objects. Beat the clock for extra points and try to have the top score in the top scores hall of fame!  
 
 
 ## Specifications
