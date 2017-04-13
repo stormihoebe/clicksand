@@ -54,6 +54,7 @@ body {
   color: white;
   border-radius: 0;
   border: solid 15px #eee;
+  padding-right: 40px!important;
 }
 
 .backgroundPosition {
@@ -299,7 +300,8 @@ h4, h5, p, h1, h3, label {
   font-family: 'VT323', monospace;
 }
 label {
-  font-size: 25px;
+  font-size: 35px;
+  font-weight: 100 !important;
 }
 h5 {
   font-size: 35px;
@@ -330,8 +332,8 @@ h3 {
 
 .btn-success {
     color: #fff;
-    background-color: #ffda10;
-    border-color: #FFC000;
+    background-color: #f8c40b;
+    border-color: #f8c40b;
     min-width: 100px;
     min-height: 40px;
     font-size: 33px;
