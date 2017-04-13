@@ -397,6 +397,11 @@ h3 {
   font-size: 59px;
 }
 
+.jumbotron  h1 {
+    background: -webkit-linear-gradient(#ffed10, #e86100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
 @media screen and (max-width: 1200px){
     .home h1 {
