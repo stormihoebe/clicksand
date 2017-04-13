@@ -389,7 +389,7 @@ h3 {
     }
 }
 .home h1 {
-  background: -webkit-linear-gradient(yellow, orange);
+  -webkit-linear-gradient(#ffed10, #e86100);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
