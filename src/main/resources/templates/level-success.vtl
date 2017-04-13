@@ -2,19 +2,24 @@
   <h1>Yay. You beat level $lastLevel!</h1>
 </div>
 
-<h3>Level Score: $levelScore</h3>
-<h3>Total Score: $game.getScore()</h3>
+<div class="well" id="fistWell">
+  <h3>Level $lastLevel Score: $levelScore</h3>
+</div>
+<div class="well" id="secondWell">
+    <h3>Total Score: $game.getScore()</h3>
+</div>
+
 
 <div class="row text-center">
 
   #if($lastLevel < 15)
-    <div class="col-md-8">
+    <div class="col-md-12">
       <h3> Your objective for the next level: $game.getLevelInstruction() </h3>
     </div>
 
-    <div class="col-md-4">
+
       <a href="/levels/$game.getLevelId()"><button type="button" name="button" class="btn btn-success">Next Level!</button></a>
-    </div>
+
   #else
     <h2>Hurrah!!</h2>
     <h3>You have completed the game!</h3>

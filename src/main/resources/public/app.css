@@ -42,12 +42,10 @@ body {
   padding: 0;
 }
 
-
-
 .text-center {
   text-align: center;
+  /*margin-top: 155px;*/
 }
-
 
 .jumbotron {
   background-color: #333;
@@ -339,6 +337,8 @@ h3 {
     font-size: 33px;
     font-family: 'VT323', monospace;
     margin: 20px;
+    width: 29%;
+    border-radius: 0;
 }
 .btn-success:hover, .btn-success:active   {
   background-color: #FFC000!important;
@@ -360,10 +360,6 @@ h3 {
 .mid-container {
   margin: 25px;
   text-align: center;
-}
-
-.container {
-
 }
 
 .mid-container p {
@@ -409,6 +405,20 @@ h3 {
     -webkit-text-fill-color: transparent;
   }
 
+#fistWell {
+  margin: 0 79px 16px;
+  border-radius: 0;
+  background: darkgreen !important;
+  color: white;
+  text-align: center;
+}
+#secondWell {
+  margin: 0 79px 16px;
+  border-radius: 0;
+  background-color: darkblue !important;
+  color: white;
+  text-align: center;
+}
 @media screen and (max-width: 1200px){
     .home h1 {
         font-size: 85px;
