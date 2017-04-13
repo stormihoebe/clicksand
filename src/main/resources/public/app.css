@@ -303,6 +303,20 @@ h3 {
   font-size: 35px;
 }
 
+.btn-success {
+    color: #fff;
+    background-color: #ffda10;
+    border-color: #FFC000;
+    min-width: 100px;
+    min-height: 40px;
+    font-size: 33px;
+    font-family: 'VT323', monospace;
+    margin: 20px;
+}
+.btn-success:hover {
+  background-color: #FFC000;
+  border-color: #ffda10;
+}
 /* index page */
 .row-width {
   width: 75%;
