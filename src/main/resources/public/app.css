@@ -10,9 +10,15 @@
 
 @import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 
-
+.bonusTime {
+  font-family:'VT323', monospace;
+  font-size: 50px;
+}
+.col-md-4 {
+  font-size: 25px;
+}
 #time35000, #time20000, #time25000 {
-  font-size: 80px;
+  font-size: 100px;
   color: gray;
   text-align: center;
   font-family: 'VT323', monospace;
@@ -25,9 +31,9 @@ html {
 }
 
 body {
-  /*max-width: 1050px;*/
   height: 100%;
   margin: auto;
+  background-color: #333;
 }
 
 .container {
@@ -35,6 +41,8 @@ body {
   background-color: #eee;
   padding: 0;
 }
+
+
 
 .text-center {
   text-align: center;
@@ -44,6 +52,8 @@ body {
   background-color: #c5c5c5;
   background-color: #333;
   color: white;
+  border-radius: 0;
+  border: solid 15px #eee;
 }
 
 .backgroundPosition {
@@ -295,6 +305,21 @@ h5 {
   font-size: 35px;
 }
 
+.rank h5 {
+  background-color: darkblue;
+  color: white;
+}
+
+.score h5 {
+  background-color: darkgreen;
+  color: white;
+}
+
+.name h5 {
+  background-color: darkred;
+  color: white;
+}
+
 h4 {
   font-size: 40px;
 }
@@ -336,15 +361,21 @@ h3 {
 }
 
 .mid-container p {
-  width: 50%;
+  width: 70%;
   margin: auto;
   margin-bottom: 20px;
   font-family: sans-serif;;
+  font-size: 25px;
 }
 
 .form-control {
   width: 50%;
   margin: auto;
+}
+
+.panel-heading {
+  background-color: #333!important;
+  color: white!important;
 }
 
 .panel-body {

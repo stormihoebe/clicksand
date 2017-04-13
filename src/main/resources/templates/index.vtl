@@ -1,49 +1,53 @@
 <!--index.vtl-->
-<div class='jumbotron home'>
-  <h1>Clicksand</h1>
-</div>
+<div class="container-home">
 
-<div class="mid-container">
-  <h3>How to play:</h3>
-  <p>Each level you are going to be instruced to find and click on something within an image. You must race against the clock and do each level as fast as you can to obtain the highest score. For your first challenge, you will be asked to find a swordfish in the picture and click on it. Good Luck!</p>
+  <div class='jumbotron home'>
+    <h1>Clicksand</h1>
+  </div>
 
-  <form action="/start-game" method="post">
-    <div class="form-group">
-      <label for="name">Enter your name and Let's get this party started!</label>
-      <input type="text" class="form-control" name="name" required>
-    </div>
-    <button type="submit" name="button" class="btn btn-success button">PLAY</button>
-  </form>
-</div>
+  <div class="mid-container">
+    <h3>How to play:</h3>
+    <p>Each level you will be instructed to find and click on something within an image. You must race against the clock and do each level as fast as you can to obtain the highest score. Get the highest score and live on in <em>Clicksand's</em> hall of fame! </p>
+    <p><strong>For your first challenge, you will need to find a swordfish in the picture. Good Luck and happy clicking!</strong></p>
 
-  <div class="panel panel-default">
-    <div class="panel-heading"><h4 class="text-center">The Top 5 Scores</h4></div>
-      <div class="panel-body">
+    <form action="/start-game" method="post">
+      <div class="form-group">
+        <label for="name">Enter your name and Let's get this party started!</label>
+        <input type="text" class="form-control" name="name" required>
+      </div>
+      <button type="submit" name="button" class="btn btn-success button">PLAY</button>
+    </form>
+  </div>
 
-      <div class="row row-width">
-        <div class="col-md-4">
-          <h5> RANK </h5>
-          <p>1ST</p>
-          <p>2ND</p>
-          <p>3RD</p>
-          <p>4TH</p>
-          <p>5TH</p>
-        </div>
-        <div class="col-md-4">
-          <h5> NAME </h5>
-          <p>$topScores.get(0).getPlayerName()</p>
-          <p>$topScores.get(1).getPlayerName()</p>
-          <p>$topScores.get(2).getPlayerName()</p>
-          <p>$topScores.get(3).getPlayerName()</p>
-          <p>$topScores.get(4).getPlayerName()</p>
-        </div>
-        <div class="col-md-4">
-          <h5> SCORE </h5>
-          <p>$topScores.get(0).getScore()</p>
-          <p>$topScores.get(1).getScore()</p>
-          <p>$topScores.get(2).getScore()</p>
-          <p>$topScores.get(3).getScore()</p>
-          <p>$topScores.get(4).getScore()</p>
+    <div class="panel panel-default">
+      <div class="panel-heading"><h4 class="text-center">The Top 5 Scores</h4></div>
+        <div class="panel-body">
+
+        <div class="row row-width">
+          <div class="col-md-4 rank">
+            <h5> RANK </h5>
+            <p>1ST</p>
+            <p>2ND</p>
+            <p>3RD</p>
+            <p>4TH</p>
+            <p>5TH</p>
+          </div>
+          <div class="col-md-4 name">
+            <h5> NAME </h5>
+            <p>$topScores.get(0).getPlayerName()</p>
+            <p>$topScores.get(1).getPlayerName()</p>
+            <p>$topScores.get(2).getPlayerName()</p>
+            <p>$topScores.get(3).getPlayerName()</p>
+            <p>$topScores.get(4).getPlayerName()</p>
+          </div>
+          <div class="col-md-4 score">
+            <h5> SCORE </h5>
+            <p>$topScores.get(0).getScore()</p>
+            <p>$topScores.get(1).getScore()</p>
+            <p>$topScores.get(2).getScore()</p>
+            <p>$topScores.get(3).getScore()</p>
+            <p>$topScores.get(4).getScore()</p>
+          </div>
         </div>
       </div>
     </div>
