@@ -10,9 +10,15 @@
 
 @import url(http://fonts.googleapis.com/css?family=Covered+By+Your+Grace);
 
-
+.bonusTime {
+  font-family:'VT323', monospace;
+  font-size: 50px;
+}
+.col-md-4 {
+  font-size: 25px;
+}
 #time35000, #time20000, #time25000 {
-  font-size: 80px;
+  font-size: 100px;
   color: gray;
   text-align: center;
   font-family: 'VT323', monospace;
@@ -25,9 +31,9 @@ html {
 }
 
 body {
-  /*max-width: 1050px;*/
   height: 100%;
   margin: auto;
+  background-color: #333;
 }
 
 .container {
@@ -36,10 +42,23 @@ body {
   padding: 0;
 }
 
+
+
 .text-center {
   text-align: center;
 }
 
+<<<<<<< HEAD
+=======
+.jumbotron {
+  background-color: #c5c5c5;
+  background-color: #333;
+  color: white;
+  border-radius: 0;
+  border: solid 15px #eee;
+}
+
+>>>>>>> 76d92e3b5392e7a5779bb9a67dcfa0017723cec7
 .backgroundPosition {
   width: 650px;
   height:650px;
@@ -136,8 +155,8 @@ body {
   height: 31px;
   width: 84px;
   position: absolute;
-  right: 230px;
-  bottom: 106px;
+  left: 484px;
+  top: 554px;
   opacity: 0;
   cursor: auto;
 }
@@ -147,7 +166,7 @@ body {
   width: 31px;
   position: absolute;
   left: 135px;
-  bottom: 96px;
+  top: 574px;
   opacity: 0;
   cursor: auto;
 }
@@ -156,7 +175,7 @@ body {
   height: 33px;
   width: 33px;
   position: absolute;
-  right: 117px;
+  left: 651px;
   top: 217px;
   opacity: 0;
   cursor: auto;
@@ -168,7 +187,7 @@ body {
   width: 59px;
   position: absolute;
   left: 186px;
-  bottom: 196px;
+  top: 441px;
   opacity: 0;
   cursor: auto;
   border-radius: 63px;
@@ -178,7 +197,7 @@ body {
   height: 14px;
   width: 25px;
   position: absolute;
-  right: 360px;
+  left: 413px;
   top: 238px;
   opacity: 0;
   cursor: auto;
@@ -200,7 +219,7 @@ body {
   height: 35px;
   width: 35px;
   position: absolute;
-  right: 221px;
+  left: 546px;
   top: 180px;
   opacity: 0;
   cursor: auto;
@@ -221,7 +240,7 @@ body {
   height: 27px;
   width: 40px;
   position: absolute;
-  right: 213px;
+  left: 546px;
   top: 79px;
   opacity: 0;
   cursor: auto;
@@ -231,7 +250,7 @@ body {
   height: 55px;
   width: 31px;
   position: absolute;
-  right: 326px;
+  left: 441px;
   top: 158px;
   opacity: 0;
   cursor: auto;
@@ -241,8 +260,8 @@ body {
   height: 30px;
   width: 20px;
   position: absolute;
-  right: 152px;
-  bottom: 192px;
+  left: 621px;
+  top: 468px;
   opacity: 0;
   cursor: auto;
   border-radius: 0;
@@ -251,8 +270,8 @@ body {
   height: 30px;
   width: 30px;
   position: absolute;
-  right: 111px;
-  top: 111px;
+  left: 656px;
+  top: 109px;
   opacity: 0;
   cursor: auto;
   border-radius: 0;
@@ -262,9 +281,9 @@ body {
   height: 30px;
   width: 30px;
   position: absolute;
-  right: 143px;
+  left: 629px;
   top: 68px;
-  opacity:0;
+  opacity: 0;
   cursor: auto;
   border-radius: 0;
 }
@@ -289,6 +308,21 @@ h5 {
   font-size: 35px;
 }
 
+.rank h5 {
+  background-color: darkblue;
+  color: white;
+}
+
+.score h5 {
+  background-color: darkgreen;
+  color: white;
+}
+
+.name h5 {
+  background-color: darkred;
+  color: white;
+}
+
 h4 {
   font-size: 40px;
 }
@@ -296,6 +330,22 @@ h4 {
 h3 {
   font-size: 35px;
 }
+
+.btn-success {
+    color: #fff;
+    background-color: #ffda10;
+    border-color: #FFC000;
+    min-width: 100px;
+    min-height: 40px;
+    font-size: 33px;
+    font-family: 'VT323', monospace;
+    margin: 20px;
+}
+.btn-success:hover, .btn-success:active   {
+  background-color: #FFC000!important;
+  border-color: #ffda10;
+}
+
 
 /* index page */
 .row-width {
@@ -318,15 +368,21 @@ h3 {
 }
 
 .mid-container p {
-  width: 50%;
+  width: 70%;
   margin: auto;
   margin-bottom: 20px;
   font-family: sans-serif;;
+  font-size: 25px;
 }
 
 .form-control {
   width: 50%;
   margin: auto;
+}
+
+.panel-heading {
+  background-color: #333!important;
+  color: white!important;
 }
 
 .panel-body {
@@ -348,9 +404,11 @@ h3 {
   font-size: 59px;
 }
 
-.btn-nextLevel {
-  margin-top: 19px;
-}
+.jumbotron  h1 {
+    background: -webkit-linear-gradient(#ffed10, #e86100);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 
 @media screen and (max-width: 1200px){
     .home h1 {
