@@ -1,0 +1,42 @@
+<!-- level.vtl -->
+<div class="jumbotron text-center">
+  <h1>Level $game.getLevelId() - $game.getLevelName()</h1>
+</div>
+
+<div class="row text-center">
+  <div class="col-md-8">
+
+    <div class="level$game.getLevelId() backgroundPosition">
+      <form action="/levels/$game.getLevelId()" method="post">
+        <button type="submit" name="button" class="btn btn-$game.getLevelId()">
+        </button>
+      </form>
+
+    </div>
+  </div>
+  <div class="col-md-4">
+    <h2 class="bonusTime">Bonus Time:</h2>
+
+    <div id="timer">
+      <div id="seconds"><span id ="time$game.getLevelMillis()"></span></div>
+    </div>
+
+  </div>
+</div>
+
+<div class="row">
+  <div class="instruction">
+    $game.getLevelInstruction()
+  </div>
+</div>
+
+<!-- level.vtl -->
+
+
+<!-- <div class="swordfish">    This would go in the database right?  getLevelImg()
+
+</div> -->
+
+<!-- <div id="timer">
+  <div id="seconds"><span id ="time20"></span></div>
+</div> -->
